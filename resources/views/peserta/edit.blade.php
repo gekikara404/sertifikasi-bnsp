@@ -3,6 +3,20 @@
 @section('content')
 <div class="container">
     <h1>Edit Data Peserta</h1>
+    @if (session('success'))
+    <div class="alert alert-danger">
+        {{ session('success') }}
+    </div>
+    @endif
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <form action="{{ route('peserta.update', $peserta->id_peserta) }}" method="POST">
         @csrf
         @method('PATCH')

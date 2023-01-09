@@ -3,6 +3,11 @@
 @section('content')
     <h1>Sertifikasi</h1>
     <a href="/sertifikasi/tambah" class="btn btn-primary mb-3">Tambah Skema</a>
+    @if (session('danger'))
+        <div class="alert alert-danger">
+            {{ session('danger') }}
+        </div>
+    @endif
     <table class="table table-bordered">
         <thead>
             <tr>

@@ -28,4 +28,13 @@
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
+<footer>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="text-muted">Created by Agung Satrio Wibowo | Peserta BNSP Junior Web Programming</p>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>

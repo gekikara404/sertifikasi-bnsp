@@ -3,6 +3,20 @@
 @section('content')
 <div class="container">
     <h1>Edit Skema</h1>
+    @if (session('success'))
+    <div class="alert alert-danger">
+        {{ session('success') }}
+    </div>
+    @endif
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <form action="{{ route('sertifikasi.update', $skema->kd_skema) }}" method="POST">
         @csrf
         @method('PATCH')

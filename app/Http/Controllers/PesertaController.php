@@ -29,6 +29,12 @@ class PesertaController extends Controller
             'jekel' => 'required|max:255',
             'alamat' => 'required|max:255',
             'no_hp' => 'required|max:255',
+        ],
+        [   'kd_skema.required' => 'Kode skema wajib diisi',    
+            'nm_peserta.required' => 'Nama peserta wajib diisi',    
+            'jekel.required' => 'Jenis kelamin wajib diisi',    
+            'alamat.required' => 'Alamat wajib diisi',    
+            'no_hp.required' => 'Nomor handphone wajib diisi'
         ]);
     
         $peserta = new Peserta;
@@ -60,7 +66,13 @@ class PesertaController extends Controller
             'jekel' => 'required|max:255',
             'alamat' => 'required|max:255',
             'no_hp' => 'required|max:255',
-        ]);
+        ],
+        [   'kd_skema.required' => 'Kode skema wajib diisi',    
+            'nm_peserta.required' => 'Nama peserta wajib diisi',    
+            'jekel.required' => 'Jenis kelamin wajib diisi',    
+            'alamat.required' => 'Alamat wajib diisi',    
+            'no_hp.required' => 'Nomor handphone wajib diisi'
+        ]); 
     
         $peserta = Peserta::find($id);
         $peserta->kd_skema = $request->kd_skema;
